@@ -58,6 +58,7 @@ class SingleNeuronSwish(nn.Module):
 # Set the seed for reproducibility
 set_seed(42)
 f_star_test = False
+f_star_num_cal = True
 input_size = None # Set Size
 time = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 print(time, flush=True)
@@ -180,15 +181,16 @@ for x in range(len(X)):
     
     if x%100==0: print(x, flush=True)
 
-    f_star_numerical = compute_f_star(torch.from_numpy(theta_f_star_numerical).float(), torch.from_numpy(X.iloc[x].to_numpy()).float(), y[x], N=5000)  # Calculated via integration (definition)
-    f_star_numerical = f_star_numerical.numpy()
-    f_star_numerical = np.append(f_star_numerical, phi(0)) # adding (\phi(0))
-    # f_star_matrix_ls.append(f_star_numerical) 
-
-    f_star_numerical = f_star_row(torch.from_numpy(theta_f_star_numerical).float(), torch.from_numpy(X.iloc[x].to_numpy()).float(), y[x])    
-    f_star_numerical = f_star_numerical.numpy()
-    f_star_numerical = np.append(f_star_numerical, phi(0)) # adding (\phi(0))
-    f_star_matrix_ls.append(f_star_numerical)
+    if f_star_num_cal:
+        f_star_numerical = compute_f_star(torch.from_numpy(theta_f_star_numerical).float(), torch.from_numpy(X.iloc[x].to_numpy()).float(), y[x], N=5000)  # Calculated via integration (definition)
+        f_star_numerical = f_star_numerical.numpy()
+        f_star_numerical = np.append(f_star_numerical, phi(0)) # adding (\phi(0))
+        f_star_matrix_ls.append(f_star_numerical) 
+    else:
+        f_star_numerical = f_star_row(torch.from_numpy(theta_f_star_numerical).float(), torch.from_numpy(X.iloc[x].to_numpy()).float(), y[x])    
+        f_star_numerical = f_star_numerical.numpy()
+        f_star_numerical = np.append(f_star_numerical, phi(0)) # adding (\phi(0))
+        f_star_matrix_ls.append(f_star_numerical)
 
     row_path = X.iloc[x].tolist()
     row_path.append(y[x])

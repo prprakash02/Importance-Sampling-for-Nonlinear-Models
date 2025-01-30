@@ -39,6 +39,7 @@ This repository contains code for training, evaluating, and computing non-linear
 2. **Project Structure**  
    - Ensure that the `.py` files (e.g., `ImageModel.py`, `RegTrain.py`) are in the same directory so that imports work correctly.
    - For tasks, ensure your paths are defined properly (e.g., `DATA_PATH`).
+   - For numerical integration, we recommend integrating with `N` as high as possible for better approximation.
 
 ---
 
