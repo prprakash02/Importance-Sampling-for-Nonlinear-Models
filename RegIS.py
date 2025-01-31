@@ -114,6 +114,9 @@ def compute_f_star(theta, x, y, N=5000):
 
     Returns:
     - f_star: the computed F*(θ, x)
+
+    Note: For numerical integration, we recommend integrating with N as high 
+        as possible for better approximation.
     """
 
     # Ensure theta requires gradients

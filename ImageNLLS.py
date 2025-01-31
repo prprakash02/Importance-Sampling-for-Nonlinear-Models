@@ -119,6 +119,9 @@ def compute_f_star(theta, x, N=5000):
 
     Returns:
         f_star (Tensor): Shape (1010,). Computed integral approximation.
+
+    Note: For numerical integration, we recommend integrating with N as high 
+        as possible for better approximation.
     """
     # Prepare tensors
     theta = theta.clone().detach().float().requires_grad_(True)

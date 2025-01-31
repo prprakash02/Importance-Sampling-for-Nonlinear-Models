@@ -1,6 +1,6 @@
 # Importance Sampling for Nonlinear Models
 
-This repository contains code for training a model and computing nonlinear/linear importance scores on both **image classification** tasks and **regression** tasks. A few straightforward modifications could be necessary depending on the dataset and the sampling methods.
+This repository contains code for training a model and computing nonlinear importance scores on both **image classification** tasks and **regression** tasks. A few straightforward modifications could be necessary depending on the dataset and the sampling methods.
 
 ---
 
@@ -39,7 +39,6 @@ This repository contains code for training a model and computing nonlinear/linea
 2. **Project Structure**  
    - Ensure that the `.py` files (e.g., `ImageModel.py`, `Imagerain.py`) are in the same directory so that imports work correctly.
    - For tasks, ensure your paths are defined properly (e.g., `DATA_PATH`).
-   - For numerical integration, we recommend integrating with `N` as high as possible for better approximation.
 
 ---
 
