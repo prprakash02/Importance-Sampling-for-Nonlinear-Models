@@ -7,7 +7,7 @@ This repository contains code for training, evaluating, and computing non-linear
 ## File Structure
 
 1. **`ImageModel.py`**  
-   - Defines a simple neural network architecture (`SimpleNNBinary`) for image-based binary classification after reducing the labelled dataset.  
+   - Defines a simple neural network architecture (`SimpleNNBinary`) for image-based binary classification (after reducing the multi-class labelled dataset if required).  
 
 2. **`ImageTrain.py`**  
    - Contains the main training loop for image-based tasks.  
@@ -24,7 +24,7 @@ This repository contains code for training, evaluating, and computing non-linear
    - Demonstrates custom activation functions (Swish) and uses typical regression losses (MSELoss).  
 
 5. **`RegIS.py`**  
-   - Similar to `ImageNLLS.py` but specialized for **regression** tasks.  
+   - Similar to `ImageNLLS.py` but specialized for **regression** tasks and other importance sampling methods.  
 
 6. **`README.md`**  
    - This document provides an overview of the repository and instructions on how to use the scripts.
@@ -37,7 +37,7 @@ This repository contains code for training, evaluating, and computing non-linear
    - This codebase requires Python 3.11+ (or compatible).  
    - Libraries such as PyTorch, NumPy, Pandas, Matplotlib, and scikit-learn are needed.  
 2. **Project Structure**  
-   - Ensure that the `.py` files (e.g., `ImageModel.py`, `RegTrain.py`) are in the same directory so that imports work correctly.
+   - Ensure that the `.py` files (e.g., `ImageModel.py`, `Imagerain.py`) are in the same directory so that imports work correctly.
    - For tasks, ensure your paths are defined properly (e.g., `DATA_PATH`).
    - For numerical integration, we recommend integrating with `N` as high as possible for better approximation.
 

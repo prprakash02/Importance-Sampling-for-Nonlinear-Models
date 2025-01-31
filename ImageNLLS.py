@@ -364,7 +364,7 @@ print("Condition number of f_star_matrix_ls_XTX:", condition_number, flush=True)
 f_star_matrix_ls_XTX_inv = np.linalg.pinv(f_star_matrix_ls_XTX)
 
 # Calculate leverage scores for each row
-for index in range(len(nlls)):
+for index in range(len(nlls)): # Can also use QR factorization instead
     x_vec = f_star_matrix_ls[index]
     nlls[index] = np.dot(np.dot(np.transpose(x_vec), f_star_matrix_ls_XTX_inv), x_vec)
 
