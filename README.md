@@ -1,6 +1,6 @@
 # Importance Sampling for Nonlinear Models
 
-This repository contains code for training, evaluating, and computing non-linear importance scores on both **image classification** tasks and **regression** tasks. A few straightforward modifications could be necessary depending on the dataset and the sampling methods.
+This repository contains code for training a model and computing nonlinear/linear importance scores on both **image classification** tasks and **regression** tasks. A few straightforward modifications could be necessary depending on the dataset and the sampling methods.
 
 ---
 
