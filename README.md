@@ -1,6 +1,6 @@
 # Importance Sampling for Nonlinear Models
 
-This repository contains code for training, evaluating, and computing non-linear importance scores on both **image classification** tasks and **regression** tasks. A few straightforward modifications are necessary depending on the dataset.
+This repository contains code for training, evaluating, and computing non-linear importance scores on both **image classification** tasks and **regression** tasks. A few straightforward modifications could be necessary depending on the dataset and the sampling methods.
 
 ---
 
@@ -23,7 +23,7 @@ This repository contains code for training, evaluating, and computing non-linear
    - Provides a training pipeline for a **regression** problem using a single-neuron (index) model.  
    - Demonstrates custom activation functions (Swish) and uses typical regression losses (MSELoss).  
 
-5. **`RegNLLS.py`**  
+5. **`RegIS.py`**  
    - Similar to `ImageNLLS.py` but specialized for **regression** tasks.  
 
 6. **`README.md`**  
